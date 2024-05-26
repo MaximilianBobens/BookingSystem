@@ -1,0 +1,40 @@
+/* Allgemeine Stile */
+body {
+    background-color: #ffffff; /* Weißer Hintergrund */
+    color: #333333; /* Dunkelgraue Schriftfarbe */
+}
+
+.navbar-light {
+    background-color: #f8f9fa; /* Hellgrauer Hintergrund der Navbar */
+    border-bottom: 1px solid #e7e7e7; /* Untere Rahmenlinie der Navbar */
+}
+
+.navbar-light .navbar-brand {
+    color: #333333; /* Dunkelgraue Farbe des Brandings */
+}
+
+.navbar-light .nav-link {
+    color: #333333; /* Dunkelgraue Farbe der Links */
+}
+
+.navbar-light .nav-link:hover {
+    color: #0056b3; /* Blaue Farbe der Links beim Hover */
+}
+
+a{
+    color: #1e2125;
+}
+
+
+.sidebar .nav-link {
+    color: #333333; /* Dunkelgraue Farbe der Links in der Seitenleiste */
+    padding: 0.75rem 1.25rem;
+}
+
+
+/* Hauptinhalt */
+main {
+    
+    justify-content: center;
+    padding: 2rem;
+}

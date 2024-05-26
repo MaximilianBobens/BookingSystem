@@ -1,0 +1,42 @@
+﻿@page "/booking"
+
+
+<h3>Trainee Booking System</h3>
+
+<div class="form-group">
+    <label for="traineeName">Trainee Name:</label>
+    <input type="text" id="traineeName" @bind="Booking.TraineeName" class="form-control" />
+</div>
+<div class="form-group">
+    <label for="station">Station:</label>
+    <select id="station" @bind="Booking.Station" class="form-control">
+        <option>LOWW_TWR</option>
+        <option>LOWW_DEL</option>
+        <option>LOWW_GND</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="date">Date:</label>
+    <input type="date" id="date" @bind="Booking.Date" class="form-control" />
+</div>
+<div class="form-group">
+    <label for="startTime">Training Start Time:</label>
+    <input type="time" id="startTime" @bind="Booking.StartTime" class="form-control" />
+</div>
+<div class="form-group">
+    <label for="endTime">Training End Time:</label>
+    <input type="time" id="endTime" @bind="Booking.EndTime" class="form-control" />
+</div>
+<button @onclick="AddBooking" class="btn btn-primary">Add Booking</button>
+
+@code {
+    private BookingModel Booking = new BookingModel();
+    private List<BookingModel> BookingList = new List<BookingModel>();
+
+    private void AddBooking()
+    {
+        Booking.Status = "pending";
+        BookingList.Add(Booking);
+        Booking = new BookingModel();
+    }
+}
